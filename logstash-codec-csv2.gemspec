@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
 
-  s.name            = 'logstash-codec-csv'
+  s.name            = 'logstash-codec-csv2'
   s.version         = '0.1.0'
   s.licenses        = ['Apache License (2.0)']
   s.summary         = "The csv codec is for writing csv output messages.  Is does not support input."

@@ -7,8 +7,8 @@ require "logstash/util/charset"
 #
 # This is mainly useful on inputs and outputs that already have a defined
 # framing in their transport protocol (such as zeromq, rabbitmq, redis, etc)
-class LogStash::Codecs::CSV < LogStash::Codecs::Base
-  config_name "csv"
+class LogStash::Codecs::CSV2 < LogStash::Codecs::Base
+  config_name "csv2"
 
 
   config :csv_options, :validate => :hash, :required => false, :default => Hash.new

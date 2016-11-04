@@ -1,12 +1,12 @@
 # encoding: utf-8
 require "logstash/devutils/rspec/spec_helper"
-require "logstash/codecs/csv"
+require "logstash/codecs/csv2"
 
 
-describe LogStash::Codecs::CSV do
+describe LogStash::Codecs::CSV2 do
     describe "['test1','test2','test3']" do
       subject do
-        LogStash::Codecs::CSV.new({ "fields" => ["test1","test2","test3"]})
+        LogStash::Codecs::CSV2.new({ "fields" => ["test1","test2","test3"]})
       end
       it 'should output empty fields if field is missing' do
         event = LogStash::Event.new({"test1" => "myvalue"})
@@ -40,7 +40,7 @@ describe LogStash::Codecs::CSV do
     end
     describe "col_sep" do
        subject do
-        LogStash::Codecs::CSV.new({ "fields" => ["test1","test2","test3"],"csv_options" => {"col_sep" => ";"}})
+        LogStash::Codecs::CSV2.new({ "fields" => ["test1","test2","test3"],"csv_options" => {"col_sep" => ";"}})
       end
       it 'should output correct sep' do
         event = LogStash::Event.new({"test3" => "testvalue3","test2" => "testvalue2","test1" => "testvalue1"})
